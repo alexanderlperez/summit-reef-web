@@ -30,6 +30,12 @@ export default {
           foreground: "hsl(var(--coral-foreground))",
           light: "hsl(var(--coral-light))",
         },
+        colorado: {
+          blue: "hsl(var(--colorado-blue))",
+          red: "hsl(var(--colorado-red))",
+          gold: "hsl(var(--colorado-gold))",
+          white: "hsl(var(--colorado-white))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

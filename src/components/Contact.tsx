@@ -49,7 +49,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-card-foreground">Service Area</h4>
-                    <p className="text-muted-foreground">Greater Metro Area & Surrounding Communities</p>
+                    <p className="text-muted-foreground">Front Range & Denver Metro Area</p>
                   </div>
                 </div>
                 

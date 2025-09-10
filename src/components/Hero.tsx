@@ -37,7 +37,7 @@ const Hero = () => {
         
         <div className="mt-12 text-center">
           <p className="text-lg opacity-90">
-            Serving the local community for over 10 years
+            <span className="text-colorado-gold font-semibold">Proudly serving the Front Range</span> for over 10 years
           </p>
         </div>
       </div>

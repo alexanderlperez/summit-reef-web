@@ -29,6 +29,12 @@ All colors MUST be HSL.
     --coral-foreground: 0 0% 98%;
     --coral-light: 15 75% 70%;
 
+    /* Colorado flag colors */
+    --colorado-blue: 210 100% 30%;
+    --colorado-red: 0 85% 55%;
+    --colorado-gold: 45 100% 60%;
+    --colorado-white: 0 0% 98%;
+
     /* Ocean secondary */
     --secondary: 195 50% 92%;
     --secondary-foreground: 210 20% 25%;
