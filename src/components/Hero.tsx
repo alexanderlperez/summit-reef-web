@@ -24,14 +24,10 @@ const Hero = () => {
           Professional aquarium maintenance and care services for your marine paradise
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex justify-center">
           <Button variant="hero" size="lg" className="px-8 py-4 text-lg">
             <Phone className="w-5 h-5 mr-2" />
             Schedule Service
-          </Button>
-          <Button variant="coral" size="lg" className="px-8 py-4 text-lg">
-            <Mail className="w-5 h-5 mr-2" />
-            Get Quote
           </Button>
         </div>
         

@@ -92,20 +92,10 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-card-foreground mb-6">
                 Schedule Your Service
               </h3>
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <Button variant="hero" size="lg" className="w-full">
-                    Regular Maintenance
-                  </Button>
-                  <Button variant="coral" size="lg" className="w-full">
-                    One-Time Service
-                  </Button>
-                </div>
-                <Button variant="ocean" size="lg" className="w-full">
-                  Emergency Service
-                </Button>
-                <Button variant="outline" size="lg" className="w-full">
-                  Free Consultation
+              <div className="flex justify-center">
+                <Button variant="hero" size="lg" className="w-full max-w-xs">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Schedule Service
                 </Button>
               </div>
               
