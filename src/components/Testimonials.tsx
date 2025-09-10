@@ -111,25 +111,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-muted-foreground">Happy Customers</div>
-          </div>
-          <div className="animate-fade-in" style={{ animationDelay: '0.7s' }}>
-            <div className="text-3xl md:text-4xl font-bold text-coral mb-2">10+</div>
-            <div className="text-muted-foreground">Years Experience</div>
-          </div>
-          <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <div className="text-3xl md:text-4xl font-bold text-primary-light mb-2">24/7</div>
-            <div className="text-muted-foreground">Emergency Support</div>
-          </div>
-          <div className="animate-fade-in" style={{ animationDelay: '0.9s' }}>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">99%</div>
-            <div className="text-muted-foreground">Satisfaction Rate</div>
-          </div>
-        </div>
       </div>
     </section>
   );
