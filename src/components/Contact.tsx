@@ -89,7 +89,7 @@ const Contact = () => {
             />
             
             <div className="bg-card rounded-lg p-8 shadow-card">
-              <h3 className="text-2xl font-bold text-card-foreground mb-6">
+              <h3 className="text-2xl font-bold text-card-foreground">
                 Schedule Your Service
               </h3>
               <div className="flex justify-center">
