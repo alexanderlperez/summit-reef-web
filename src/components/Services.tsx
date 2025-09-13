@@ -72,7 +72,7 @@ const Services = () => {
                 <CheckCircle className="w-6 h-6 text-primary mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Local Expertise</h4>
-                  <p className="text-muted-foreground">Deep understanding of local water conditions and marine life</p>
+                  <p className="text-muted-foreground">Local to the Denver Metropolitan Area</p>
                 </div>
               </div>
               <div className="flex items-start">
