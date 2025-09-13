@@ -33,7 +33,7 @@ const Hero = () => {
         
         <div className="mt-12 text-center">
           <p className="text-lg opacity-90">
-            <span className="text-colorado-gold font-semibold">Proudly serving the Front Range</span> for over 10 years
+            <span className="text-colorado-gold font-semibold">20 Years of Experience, Veteran-Owned and Operated.</span>
           </p>
         </div>
       </div>
