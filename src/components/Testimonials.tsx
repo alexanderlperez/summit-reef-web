@@ -9,41 +9,6 @@ const Testimonials = () => {
       content: "Summit Reef has been maintaining my 180-gallon reef tank for over 2 years. Their attention to detail is incredible - my corals have never looked better! They caught a water chemistry issue early that could have been devastating.",
       rating: 5,
       location: "Downtown"
-    },
-    {
-      name: "Mike Chen",
-      role: "Restaurant Owner",
-      content: "Our restaurant's centerpiece aquarium brings so much joy to our customers. Summit Reef keeps it pristine and healthy. When we had an emergency filtration failure on a busy Saturday, they were there within an hour!",
-      rating: 5,
-      location: "Metro District"
-    },
-    {
-      name: "Jennifer & Tom Wilson",
-      role: "Family Aquarium",
-      content: "We were struggling to keep our fish healthy until we found Summit Reef. Their monthly maintenance program has been a game-changer. The kids love watching the fish thrive, and we love the peace of mind.",
-      rating: 5,
-      location: "Suburban Hills"
-    },
-    {
-      name: "Dr. Amanda Foster",
-      role: "Veterinary Office",
-      content: "Professional, reliable, and truly knowledgeable. Summit Reef maintains our waiting room aquarium and it's become a calming focal point for our anxious pets and their owners. Highly recommend their services!",
-      rating: 5,
-      location: "Medical Center"
-    },
-    {
-      name: "Robert Garcia",
-      role: "Coral Collector",
-      content: "As someone with expensive rare corals, I needed experts I could trust. Summit Reef's team understands the unique needs of each species. My collection has never been more vibrant and healthy.",
-      rating: 5,
-      location: "Eastside"
-    },
-    {
-      name: "Lisa Thompson",
-      role: "Office Manager",
-      content: "Our office lobby aquarium was constantly having issues until Summit Reef took over. Now it's a beautiful, stress-free centerpiece that everyone admires. Their emergency support is outstanding too!",
-      rating: 5,
-      location: "Business District"
     }
   ];
 
