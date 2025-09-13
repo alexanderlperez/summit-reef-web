@@ -12,7 +12,7 @@ const Footer = () => {
             </h3>
             <p className="text-primary-foreground/80 mb-4">
               Professional aquarium maintenance and care services for your marine paradise. 
-              <span className="text-colorado-gold font-medium">Proudly serving Colorado's Front Range</span> with expertise and passion for over a decade.
+              <span className="text-colorado-gold font-medium">20 Years of Experience, Veteran-Owned and Operated.</span>
             </p>
           </div>
 
