@@ -19,7 +19,7 @@ const Hero = () => {
         </p>
         
         <div className="flex justify-center">
-          <Button variant="hero" size="lg" className="px-8 py-4 text-lg">
+          <Button variant="ocean" size="lg" className="px-8 py-4 text-lg">
             <Phone className="w-5 h-5 mr-2" />
             Schedule Service
           </Button>
