@@ -6,7 +6,6 @@ const EmergencyService = () => {
   return (
     <section className="py-12 bg-background">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="max-w-md mx-auto">
           <Card className="shadow-card border-0 bg-gradient-ocean text-white">
             <CardHeader>
               <CardTitle className="text-2xl">Emergency Service</CardTitle>
@@ -22,7 +21,6 @@ const EmergencyService = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
     </section>
   );
 };
