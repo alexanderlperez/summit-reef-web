@@ -75,6 +75,13 @@ const Services = () => {
                   <p className="text-muted-foreground">Local to the Denver Metropolitan Area</p>
                 </div>
               </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-6 h-6 text-coral mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">20 Years of Experience</h4>
+                  <p className="text-muted-foreground">Two decades of expertise in marine aquarium care and maintenance</p>
+                </div>
+              </div>
               
               <div className="flex items-start">
                 <CheckCircle className="w-6 h-6 text-primary-light mr-4 mt-1 flex-shrink-0" />
