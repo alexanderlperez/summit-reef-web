@@ -59,7 +59,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-card-foreground">Hours</h4>
-                    <p className="text-muted-foreground">Mon-Fri: 8AM-6PM | Sat: 9AM-4PM</p>
+                    <p className="text-muted-foreground">Mon-Fri: 8AM-6PM</p>
                   </div>
                 </div>
               </CardContent>
