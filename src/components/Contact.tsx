@@ -29,7 +29,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-card-foreground">Phone</h4>
-                    <p className="text-muted-foreground">(555) 123-REEF</p>
+                    <p className="text-muted-foreground">720-588-0075</p>
                   </div>
                 </div>
                 
@@ -75,7 +75,7 @@ const Contact = () => {
                 </p>
                 <Button variant="secondary" size="lg" className="w-full">
                   <Phone className="w-5 h-5 mr-2" />
-                  Emergency Hotline: (555) 911-REEF
+                  Emergency Hotline: 720-588-0075
                 </Button>
               </CardContent>
             </Card>
