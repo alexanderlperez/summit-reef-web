@@ -88,16 +88,14 @@ const Contact = () => {
               className="rounded-lg shadow-card w-full h-auto mb-8"
             />
             
-            <div className="bg-card rounded-lg p-8 shadow-card">
-              <h3 className="text-2xl font-bold text-card-foreground">
+            <div className="bg-card rounded-lg p-8 shadow-card text-center">
+              <h3 className="text-2xl font-bold text-card-foreground mb-6">
                 Schedule Your Service
               </h3>
-              <div className="flex justify-center">
-                <Button variant="hero" size="lg" className="w-full max-w-xs">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Schedule Service
-                </Button>
-              </div>
+              <Button variant="hero" size="lg" className="mx-auto">
+                <Phone className="w-5 h-5 mr-2" />
+                Schedule Service
+              </Button>
               
               <div className="mt-6 p-4 bg-gradient-subtle rounded-lg">
                 <p className="text-sm text-muted-foreground text-center">
