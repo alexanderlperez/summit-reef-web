@@ -21,13 +21,13 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed opacity-95">
-          Cleaning and emergency maintenance for fresh water and saltwater reef aquariums.
+          Tank Cleaning and Emergency Maintenance for Fresh Water and Saltwater Reef Aquariums.
         </p>
         
         <div className="flex justify-center">
           <Button variant="hero" size="lg" className="px-8 py-4 text-lg">
             <Phone className="w-5 h-5 mr-2" />
-            Schedule Now
+            Schedule Service
           </Button>
         </div>
         
