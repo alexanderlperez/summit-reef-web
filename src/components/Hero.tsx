@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed opacity-95">
-          Professional maintenance on fresh water and salt water reef aquariums
+          Maintenance on fresh water and salt water reef aquariums
         </p>
         
         <div className="flex justify-center">
