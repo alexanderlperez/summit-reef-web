@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-aquarium.jpg";
 import { Phone, Mail } from "lucide-react";
+import usFlag from "@/assets/us-flag.png";
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
         
         <div className="mt-12 text-center">
           <p className="text-lg opacity-90">
-            <span className="text-colorado-gold font-semibold">{' '}20 Years of Experience, Veteran-Owned and Operated 🇺🇸</span>
+            <span className="text-colorado-gold font-semibold">{' '}20 Years of Experience, Veteran-Owned and Operated <img src={usFlag} alt="US Flag" className="inline w-4 h-3 ml-1" /></span>
           </p>
         </div>
       </div>
