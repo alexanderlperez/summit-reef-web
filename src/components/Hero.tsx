@@ -20,11 +20,11 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <div className="mb-8">
+        <div className="mb-8 flex justify-center">
           <img 
             src={summitReefLogo} 
             alt="Summit Reef Aquariums Logo" 
-            className="w-32 h-32 md:w-40 md:h-40 mx-auto"
+            className="w-32 h-32 md:w-40 md:h-40 block"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
