@@ -106,9 +106,11 @@ const Contact = () => {
                 <p className="mb-4 opacity-90">
                   Aquarium emergency? We offer 24/7 emergency support for critical situations.
                 </p>
-                <Button variant="secondary" size="lg" className="w-full">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Emergency Hotline: 720-588-0075
+                <Button variant="secondary" size="lg" className="w-full" asChild>
+                  <a href="tel:7205880075">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Emergency Hotline: 720-588-0075
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -122,9 +124,11 @@ const Contact = () => {
                 Schedule Your Service
               </h3>
               <div className="flex justify-center">
-                <Button variant="hero" size="lg" className="w-full max-w-xs">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Schedule Service
+                <Button variant="hero" size="lg" className="w-full max-w-xs" asChild>
+                  <a href="tel:7205880075">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Schedule Service
+                  </a>
                 </Button>
               </div>
               

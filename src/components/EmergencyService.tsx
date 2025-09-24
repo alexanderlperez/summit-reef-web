@@ -11,9 +11,11 @@ const EmergencyService = () => {
           <p className="mb-6 opacity-90 text-lg">
             Aquarium emergency? We offer 24/7 emergency support for critical situations.
           </p>
-          <Button variant="secondary" size="lg" className="w-full max-w-md">
-            <Phone className="w-5 h-5 mr-2" />
-            Emergency Hotline: 720-588-0075
+          <Button variant="secondary" size="lg" className="w-full max-w-md" asChild>
+            <a href="tel:7205880075">
+              <Phone className="w-5 h-5 mr-2" />
+              Emergency Hotline: 720-588-0075
+            </a>
           </Button>
         </div>
       </div>
