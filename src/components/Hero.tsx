@@ -6,7 +6,7 @@ import usFlag from "@/assets/us-flag.png";
 
 const Hero = () => {
   const handleScheduleService = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
