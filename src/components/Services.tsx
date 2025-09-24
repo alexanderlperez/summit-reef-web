@@ -9,7 +9,7 @@ const Services = () => {
     features: ["pH & salinity testing", "Chemical balancing", "Water changes", "Quality monitoring"]
   }, {
     icon: <Fish className="w-8 h-8 text-coral" />,
-    title: "Marine Life Care",
+    title: "Marine and Freshwater Life Care",
     description: "Expert care for your fish, coral, and other marine inhabitants.",
     features: ["Health assessments", "Feeding programs", "Disease prevention", "Species consulting"]
   }, {
