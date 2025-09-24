@@ -5,8 +5,12 @@ import { Phone, Mail } from "lucide-react";
 import usFlag from "@/assets/us-flag.png";
 
 const Hero = () => {
+  const handleScheduleService = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${aquariumBg})` }}
@@ -25,7 +29,7 @@ const Hero = () => {
         </p>
         
         <div className="flex justify-center">
-          <Button variant="ocean" size="lg" className="px-8 py-4 text-lg">
+          <Button variant="ocean" size="lg" className="px-8 py-4 text-lg" onClick={handleScheduleService}>
             <Phone className="w-5 h-5 mr-2" />
             Schedule Service
           </Button>
