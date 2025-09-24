@@ -57,7 +57,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <Card className="shadow-card border-0 bg-card">
               <CardHeader>
