@@ -55,6 +55,15 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to give your aquarium the professional care it deserves? Contact us today!
           </p>
+          <div className="mt-8">
+            <Button 
+              size="lg" 
+              onClick={() => document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="mx-auto"
+            >
+              Schedule Your Service
+            </Button>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
