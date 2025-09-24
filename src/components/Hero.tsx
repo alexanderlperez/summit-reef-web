@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-aquarium.jpg";
 import aquariumBg from "@/assets/hero-aquarium-new.jpg";
+import summitReefLogo from "@/assets/summit-reef-logo.png";
 import { Phone, Mail } from "lucide-react";
 import usFlag from "@/assets/us-flag.png";
 
@@ -19,6 +20,13 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <div className="mb-8">
+          <img 
+            src={summitReefLogo} 
+            alt="Summit Reef Aquariums Logo" 
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto"
+          />
+        </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           Summit Reef
           <span className="block text-coral">Aquariums</span>
