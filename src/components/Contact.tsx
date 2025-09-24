@@ -27,7 +27,7 @@ const Contact = () => {
         },
         body: json
       });
-      
+      console.log(response)
       if (response.ok) {
         toast({
           title: "Message Sent!",
@@ -35,9 +35,11 @@ const Contact = () => {
         });
         e.currentTarget.reset();
       } else {
+        console.log('error!')
         throw new Error('Failed to send message');
       }
     } catch (error) {
+      console.log(error)
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
