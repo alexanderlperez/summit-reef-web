@@ -140,11 +140,6 @@ const Contact = () => {
                 </Button>
               </div>
               
-              <div className="mt-6 p-4 bg-gradient-subtle rounded-lg">
-                <p className="text-sm text-muted-foreground text-center">
-                  <strong>New customers save 20%</strong> on their first maintenance service!
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -155,6 +150,11 @@ const Contact = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-3xl font-bold text-card-foreground">Schedule Your Service</CardTitle>
               <p className="text-muted-foreground">Fill out the form below and we'll get back to you within 24 hours</p>
+              <div className="mt-6 p-4 bg-gradient-subtle rounded-lg">
+                <p className="text-sm text-muted-foreground text-center">
+                  <strong>New customers save 20%</strong> on their first maintenance service!
+                </p>
+              </div>
             </CardHeader>
             <CardContent>
 
