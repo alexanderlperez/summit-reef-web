@@ -12,7 +12,8 @@ const Contact = () => {
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
       serviceType: formData.get('serviceType') as string,
-      message: formData.get('message') as string
+      message: formData.get('message') as string,
+      access_key: formData.get('access_key') as string
     };
     
     const json = JSON.stringify(values);
