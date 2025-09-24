@@ -1,42 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { toast } from "@/hooks/use-toast";
 import coralReefImage from "@/assets/coral-reef.jpg";
-const contactFormSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  phone: z.string().trim().min(1, "Phone number is required").max(20, "Phone number must be less than 20 characters"),
-  serviceType: z.string().min(1, "Please select a service type"),
-  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters")
-});
-
 const Contact = () => {
-  const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      serviceType: "",
-      message: ""
-    }
-  });
-
-  const onSubmit = (values: z.infer<typeof contactFormSchema>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const values = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      serviceType: formData.get('serviceType') as string,
+      message: formData.get('message') as string
+    };
+    
     console.log("Form submitted:", values);
     toast({
       title: "Message Sent!",
       description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
     });
-    form.reset();
+    e.currentTarget.reset();
   };
   return <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
@@ -149,106 +133,97 @@ const Contact = () => {
               <p className="text-muted-foreground">Fill out the form below and we'll get back to you within 24 hours</p>
             </CardHeader>
             <CardContent>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Full Name
+                    </label>
+                    <input
+                      id="name"
                       name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Full Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your name" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
+                      type="text"
+                      placeholder="Your name"
+                      required
+                      maxLength={100}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     />
-                    
-                    <FormField
-                      control={form.control}
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Email Address
+                    </label>
+                    <input
+                      id="email"
                       name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input type="email" placeholder="your@email.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
+                      type="email"
+                      placeholder="your@email.com"
+                      required
+                      maxLength={255}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     />
                   </div>
+                </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Phone Number
+                    </label>
+                    <input
+                      id="phone"
                       name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Phone Number</FormLabel>
-                          <FormControl>
-                            <Input type="tel" placeholder="(720) 588-0075" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
+                      type="tel"
+                      placeholder="(720) 588-0075"
+                      required
+                      maxLength={20}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     />
-                    
-                    <FormField
-                      control={form.control}
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="serviceType" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Service Type
+                    </label>
+                    <select
+                      id="serviceType"
                       name="serviceType"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Service Type</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Select a service" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="maintenance">Regular Maintenance</SelectItem>
-                              <SelectItem value="cleaning">Deep Cleaning</SelectItem>
-                              <SelectItem value="installation">New Installation</SelectItem>
-                              <SelectItem value="emergency">Emergency Service</SelectItem>
-                              <SelectItem value="consultation">Consultation</SelectItem>
-                              <SelectItem value="other">Other</SelectItem>
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                      required
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="maintenance">Regular Maintenance</option>
+                      <option value="cleaning">Deep Cleaning</option>
+                      <option value="installation">New Installation</option>
+                      <option value="emergency">Emergency Service</option>
+                      <option value="consultation">Consultation</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
+                </div>
 
-                  <FormField
-                    control={form.control}
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
                     name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Tell us about your aquarium needs..." 
-                            className="min-h-[120px]"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    placeholder="Tell us about your aquarium needs..."
+                    required
+                    maxLength={1000}
+                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
                   />
+                </div>
 
-                  <div className="flex justify-center pt-4">
-                    <Button type="submit" size="lg" className="w-full md:w-auto">
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
-                    </Button>
-                  </div>
-                </form>
-              </Form>
+                <div className="flex justify-center pt-4">
+                  <Button type="submit" size="lg" className="w-full md:w-auto">
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </Button>
+                </div>
+              </form>
             </CardContent>
           </Card>
         </div>
