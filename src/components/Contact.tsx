@@ -127,20 +127,7 @@ const Contact = () => {
           <div className="relative">
             <img src={coralReefImage} alt="Beautiful coral reef aquarium" className="rounded-lg shadow-card w-full h-auto mb-8" />
             
-            <div className="bg-card rounded-lg p-8 ">
-              <h3 className="text-2xl font-bold text-card-foreground text-center">
-                Schedule Your Service
-              </h3>
-              <div className="flex justify-center">
-                <Button variant="hero" size="lg" className="w-full max-w-xs" asChild>
-                  <a href="tel:7205880075">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Schedule Service
-                  </a>
-                </Button>
-              </div>
-              
-            </div>
+            
           </div>
         </div>
 
