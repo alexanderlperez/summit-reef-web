@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-aquarium.jpg";
-import aquariumBg from "@/assets/aquarium-hero-bg.jpg";
+import aquariumBg from "@/assets/hero-aquarium-new.jpg";
 import { Phone, Mail } from "lucide-react";
 import usFlag from "@/assets/us-flag.png";
 
