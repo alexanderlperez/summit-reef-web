@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Droplets, Fish, Settings, CheckCircle } from "lucide-react";
-import maintenanceImage from "@/assets/maintenance-tools.jpg";
+import coralAquariumImage from "@/assets/coral-aquarium-new.jpg";
 const Services = () => {
   const services = [{
     icon: <Droplets className="w-8 h-8 text-primary" />,
@@ -89,7 +89,7 @@ const Services = () => {
             </div>
           </div>
           <div className="relative">
-            <img src={maintenanceImage} alt="Professional aquarium maintenance tools" className="rounded-lg shadow-card w-full h-auto" />
+            <img src={coralAquariumImage} alt="Beautiful coral reef aquarium display" className="rounded-lg shadow-card w-full h-auto" />
           </div>
         </div>
       </div>
