@@ -16,9 +16,7 @@ const Contact = () => {
       message: formData.get('message') as string,
       access_key: formData.get('access_key') as string
     };
-    
     const json = JSON.stringify(values);
-    
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -28,19 +26,19 @@ const Contact = () => {
         },
         body: json
       });
-      console.log(response)
+      console.log(response);
       if (response.ok) {
         toast({
           title: "Message Sent!",
-          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+          description: "Thank you for your inquiry. We'll get back to you within 24 hours."
         });
         form.reset();
       } else {
-        console.log('error!')
+        console.log('error!');
         throw new Error('Failed to send message');
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
@@ -155,7 +153,7 @@ const Contact = () => {
         <div className="mt-20">
           <Card className="max-w-4xl mx-auto shadow-card border-0 bg-card">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold text-card-foreground">Send Us a Message</CardTitle>
+              <CardTitle className="text-3xl font-bold text-card-foreground">Schedule Your Service</CardTitle>
               <p className="text-muted-foreground">Fill out the form below and we'll get back to you within 24 hours</p>
             </CardHeader>
             <CardContent>
@@ -167,30 +165,14 @@ const Contact = () => {
                     <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                       Full Name
                     </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Your name"
-                      required
-                      maxLength={100}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    />
+                    <input id="name" name="name" type="text" placeholder="Your name" required maxLength={100} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
                   </div>
                   
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                       Email Address
                     </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      required
-                      maxLength={255}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    />
+                    <input id="email" name="email" type="email" placeholder="your@email.com" required maxLength={255} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
                   </div>
                 </div>
 
@@ -199,27 +181,14 @@ const Contact = () => {
                     <label htmlFor="phone" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                       Phone Number
                     </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="(720) 588-0075"
-                      required
-                      maxLength={20}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    />
+                    <input id="phone" name="phone" type="tel" placeholder="(720) 588-0075" required maxLength={20} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
                   </div>
                   
                   <div className="space-y-2">
                     <label htmlFor="serviceType" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                       Service Type
                     </label>
-                    <select
-                      id="serviceType"
-                      name="serviceType"
-                      required
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    >
+                    <select id="serviceType" name="serviceType" required className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                       <option value="">Select a service</option>
                       <option value="maintenance">Regular Maintenance</option>
                       <option value="cleaning">Deep Cleaning</option>
@@ -235,14 +204,7 @@ const Contact = () => {
                   <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                     Message
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us about your aquarium needs..."
-                    required
-                    maxLength={1000}
-                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
-                  />
+                  <textarea id="message" name="message" placeholder="Tell us about your aquarium needs..." required maxLength={1000} className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none" />
                 </div>
 
                 <div className="flex justify-center pt-4">
