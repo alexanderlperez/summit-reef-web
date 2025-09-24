@@ -1,4 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import usFlag from "@/assets/us-flag.png";
+
 const Footer = () => {
   return <footer className="bg-primary text-primary-foreground py-12">
       <div className="max-w-7xl mx-auto px-4">
@@ -10,7 +12,7 @@ const Footer = () => {
             </h3>
             <p className="text-primary-foreground/80 mb-4">
               Professional aquarium maintenance and care services for your marine paradise. 
-              <span className="text-colorado-gold font-medium"> 20 Years of Experience, Veteran-Owned and Operated 🇺🇸</span>
+              <span className="text-colorado-gold font-medium"> 20 Years of Experience, Veteran-Owned and Operated <img src={usFlag} alt="US Flag" className="inline w-4 h-3 ml-1" /></span>
             </p>
           </div>
 
@@ -55,4 +57,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
