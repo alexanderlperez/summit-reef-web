@@ -124,8 +124,8 @@ const Contact = () => {
             </Card>
           </div>
 
-          <div className="relative">
-            <img src={coralReefImage} alt="Beautiful coral reef aquarium" className="rounded-lg shadow-card w-full h-auto mb-8" />
+          <div className="relative flex items-center justify-center">
+            <img src={coralReefImage} alt="Beautiful coral reef aquarium" className="rounded-lg shadow-card w-full h-auto" />
             
             
           </div>
