@@ -31,14 +31,6 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      
-      {/* Decorative Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 60C200 20 400 100 600 60C800 20 1000 100 1200 60V120H0V60Z" fill="hsl(var(--background))" />
-        </svg>
-      </div>
-    </section>
   );
 };
 
