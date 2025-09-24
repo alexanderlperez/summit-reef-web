@@ -23,9 +23,11 @@ const Header = () => {
 
           {/* Call to Action */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ocean" size="sm">
-              <Phone className="w-4 h-4 mr-2" />
-              720-588-0075
+            <Button variant="ocean" size="sm" asChild>
+              <a href="tel:7205880075">
+                <Phone className="w-4 h-4 mr-2" />
+                720-588-0075
+              </a>
             </Button>
           </div>
 
@@ -42,9 +44,11 @@ const Header = () => {
               <a href="#services" className="text-foreground hover:text-primary transition-smooth">Services</a>
               <a href="#about" className="text-foreground hover:text-primary transition-smooth">About</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-smooth">Contact</a>
-              <Button variant="ocean" size="sm" className="w-fit">
-                <Phone className="w-4 h-4 mr-2" />
-                720-588-0075
+              <Button variant="ocean" size="sm" className="w-fit" asChild>
+                <a href="tel:7205880075">
+                  <Phone className="w-4 h-4 mr-2" />
+                  720-588-0075
+                </a>
               </Button>
             </nav>
           </div>}
