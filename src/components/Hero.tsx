@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-aquarium.jpg";
-import coralBg from "@/assets/coral-hero-bg.jpg";
+import aquariumBg from "@/assets/aquarium-hero-bg.jpg";
 import { Phone, Mail } from "lucide-react";
 import usFlag from "@/assets/us-flag.png";
 
@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${coralBg})` }}
+        style={{ backgroundImage: `url(${aquariumBg})` }}
       ></div>
       <div className="absolute inset-0 bg-black/40"></div>
       
