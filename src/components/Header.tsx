@@ -42,7 +42,6 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-foreground hover:text-primary transition-smooth">Home</a>
               <a href="#services" className="text-foreground hover:text-primary transition-smooth">Services</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-smooth">About</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-smooth">Contact</a>
               <Button variant="ocean" size="sm" className="w-fit" asChild>
                 <a href="tel:7205880075">
