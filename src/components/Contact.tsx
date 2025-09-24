@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import coralReefImage from "@/assets/coral-reef.jpg";
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const values = {
@@ -15,12 +15,34 @@ const Contact = () => {
       message: formData.get('message') as string
     };
     
-    console.log("Form submitted:", values);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-    });
-    e.currentTarget.reset();
+    const json = JSON.stringify(values);
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+        });
+        e.currentTarget.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
   return <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
