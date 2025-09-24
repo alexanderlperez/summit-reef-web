@@ -243,10 +243,10 @@ const Contact = () => {
                 </div>
 
                 <div className="flex justify-center pt-4">
-                    <button type="submit" size="lg" className="w-full md:w-auto">
+                  <Button type="submit" size="lg" className="w-full md:w-auto">
                     <Send className="w-5 h-5 mr-2" />
                     Send Message
-                  </button>
+                  </Button>
                 </div>
               </form>
             </CardContent>
