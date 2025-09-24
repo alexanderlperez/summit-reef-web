@@ -6,7 +6,8 @@ import coralReefImage from "@/assets/coral-reef.jpg";
 const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const values = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
@@ -33,7 +34,7 @@ const Contact = () => {
           title: "Message Sent!",
           description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
         });
-        e.currentTarget.reset();
+        form.reset();
       } else {
         console.log('error!')
         throw new Error('Failed to send message');
