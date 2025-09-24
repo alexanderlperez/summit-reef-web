@@ -1,12 +1,17 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-aquarium.jpg";
+import coralBg from "@/assets/coral-hero-bg.jpg";
 import { Phone, Mail } from "lucide-react";
 import usFlag from "@/assets/us-flag.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-hero"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${coralBg})` }}
+      ></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
