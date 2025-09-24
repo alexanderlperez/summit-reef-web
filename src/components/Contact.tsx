@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import coralReefImage from "@/assets/coral-reef.jpg";
+import contactCoralReefImage from "@/assets/contact-coral-reef.jpg";
 const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -135,7 +135,7 @@ const Contact = () => {
           </div>
 
           <div className="relative flex items-center justify-center">
-            <img src={coralReefImage} alt="Beautiful coral reef aquarium" className="rounded-lg shadow-card w-full h-auto" />
+            <img src={contactCoralReefImage} alt="Beautiful coral reef aquarium" className="rounded-lg shadow-card w-full h-auto" />
             
             
           </div>
