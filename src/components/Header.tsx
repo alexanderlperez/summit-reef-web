@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Menu } from "lucide-react";
 import { useState } from "react";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -20,7 +17,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-smooth">Home</a>
             <a href="#services" className="text-foreground hover:text-primary transition-smooth">Services</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-smooth">About</a>
+            
             <a href="#contact" className="text-foreground hover:text-primary transition-smooth">Contact</a>
           </nav>
 
@@ -33,19 +30,13 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu className="w-5 h-5" />
           </Button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+        {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-foreground hover:text-primary transition-smooth">Home</a>
               <a href="#services" className="text-foreground hover:text-primary transition-smooth">Services</a>
@@ -56,11 +47,8 @@ const Header = () => {
                 720-588-0075
               </Button>
             </nav>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;

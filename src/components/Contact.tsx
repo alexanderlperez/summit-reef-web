@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import coralReefImage from "@/assets/coral-reef.jpg";
-
 const Contact = () => {
-  return (
-    <section className="py-20 bg-background">
+  return <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -82,14 +80,10 @@ const Contact = () => {
           </div>
 
           <div className="relative">
-            <img 
-              src={coralReefImage} 
-              alt="Beautiful coral reef aquarium" 
-              className="rounded-lg shadow-card w-full h-auto mb-8"
-            />
+            <img src={coralReefImage} alt="Beautiful coral reef aquarium" className="rounded-lg shadow-card w-full h-auto mb-8" />
             
-            <div className="bg-card rounded-lg p-8 shadow-card">
-              <h3 className="text-2xl font-bold text-card-foreground">
+            <div className="bg-card rounded-lg p-8 ">
+              <h3 className="text-2xl font-bold text-card-foreground text-center">
                 Schedule Your Service
               </h3>
               <div className="flex justify-center">
@@ -108,8 +102,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
