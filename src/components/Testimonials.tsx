@@ -9,6 +9,13 @@ const Testimonials = () => {
       content: "Summit Reef has been maintaining my 180-gallon reef tank for over 2 years. Their attention to detail is incredible - my corals have never looked better! They caught a water chemistry issue early that could have been devastating.",
       rating: 5,
       location: "Downtown"
+    },
+    {
+      name: "Justin D.",
+      role: "Premium Client",
+      content: "Summit provides white-glove service I trust completely, even when I'm not home. If you expect excellence and demand the best, this is the team you call",
+      rating: 5,
+      location: "West Side"
     }
   ];
 
